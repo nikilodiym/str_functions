@@ -22,7 +22,6 @@ char* string_copy(char* str1, const char* str2) {
 /// The function copies the string
 /// </summary>
 /// <param name="str">The string</param>
-//void toLower(char* str);
 
 char* string_concat(char* str1, const char* str2) {
     char* ptr = str1;
@@ -35,4 +34,18 @@ char* string_concat(char* str1, const char* str2) {
 /// The function concatenates two strings
 /// </summary>
 /// <param name="str">The string</param>
-//void toLower(char* str);
+
+const char* string_find_char(const char* str, char s) {
+    while (*str) {
+        if (*str == s) {
+            return str;
+        }
+        str++;
+    }
+    return 0;
+}
+
+/// <summary>
+/// The function finds the character in the string
+/// </summary>
+/// <param name="str">The string</param>
