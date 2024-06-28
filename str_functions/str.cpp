@@ -1,11 +1,18 @@
 #include "str.h"
 
-//int myStrlen(const char* str);
-//void myStrcpy(char* dest, const char* src);
+int string_length(const char* str) {
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
+    }
+    return length;
+}
 /// <summary>
 /// The function returns the length of the string
 /// </summary>
 /// <param name="str">The string</param>
+
+
 //void toUpper(char* str);
 /// <summary>
 /// The function converts the string to lowercase
