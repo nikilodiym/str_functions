@@ -5,7 +5,6 @@
 using namespace std;
 
 int main() {
-	char str[] = "hello, world!";
-	//toUpper(str);
+
 	return 0;
 }
