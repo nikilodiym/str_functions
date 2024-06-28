@@ -12,10 +12,27 @@ int string_length(const char* str) {
 /// </summary>
 /// <param name="str">The string</param>
 
+char* string_copy(char* str1, const char* str2) {
+    char* ptr = str1;
+    while ((*str1++ = *str2++) != '\0');
+    return ptr;
+}
 
-//void toUpper(char* str);
 /// <summary>
-/// The function converts the string to lowercase
+/// The function copies the string
+/// </summary>
+/// <param name="str">The string</param>
+//void toLower(char* str);
+
+char* string_concat(char* str1, const char* str2) {
+    char* ptr = str1;
+    while (*str1) str1++;
+    while ((*str1++ = *str2++) != '\0');
+    return ptr;
+}
+
+/// <summary>
+/// The function concatenates two strings
 /// </summary>
 /// <param name="str">The string</param>
 //void toLower(char* str);

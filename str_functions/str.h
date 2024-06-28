@@ -1,5 +1,8 @@
-#include <iostream>
-#include <string>
-#include <ctime>
+#ifndef STR_H
+#define STR_H
 
-using namespace std;
+int string_length(const char* str);
+char* string_copy(char* str1, const char* str2);
+char* string_concat(char* str1, const char* str2);  
+
+#endif
