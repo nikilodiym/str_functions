@@ -9,6 +9,7 @@ int main() {
     char str[] = "Hello, World!";
     char buffer[50];
     char ch;
+    char substr[50];
 
     cout << "Enter your choice: ";
     cin >> choice;
@@ -27,12 +28,28 @@ int main() {
     case 4:
         cout << "Enter a character to find: ";
         cin >> ch;
-        const char* found = string_find_char(str, ch);
-        if (found) {
-            cout << "Character '" << ch << "' found at position: " << (found - str) << endl;
+        {
+            const char* found = string_find_char(str, ch);
+            if (found) {
+                cout << "Character '" << ch << "' found at position: " << (found - str) << endl;
+            }
+            else {
+                cout << "Character '" << ch << "' not found!" << endl;
+            }
         }
-        else {
-            cout << "Character '" << ch << "' not found!" << endl;
+        break;
+    case 5:
+        cout << "Enter a substring to find: ";
+        cin.ignore();
+        cin.getline(substr, 50);
+        {
+            const char* found_substr = string_find_substr(str, substr);
+            if (found_substr) {
+                cout << "Substring \"" << substr << "\" found at position: " << (found_substr - str) << endl;
+            }
+            else {
+                cout << "Substring \"" << substr << "\" not found!" << endl;
+            }
         }
         break;
     default:

@@ -49,3 +49,25 @@ const char* string_find_char(const char* str, char s) {
 /// The function finds the character in the string
 /// </summary>
 /// <param name="str">The string</param>
+
+
+const char* string_find_substr(const char* str1, const char* str2) {
+	while (*str1) {
+		const char* ptr1 = str1;
+		const char* ptr2 = str2;
+		while (*ptr1 && *ptr2 && *ptr1 == *ptr2) {
+			ptr1++;
+			ptr2++;
+		}
+		if (!*ptr2) {
+			return str1;
+		}
+		str1++;
+	}
+	return 0;
+}
+
+/// <summary>
+/// The function finds the substring in the string
+/// </summary>
+/// <param name="str">The string</param>
