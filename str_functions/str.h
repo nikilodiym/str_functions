@@ -1,5 +1,6 @@
-#include <iostream>
-#include <string>
-#include <ctime>
+#ifndef STR_H
+#define STR_H
 
-using namespace std;
+int string_length(const char* str);
+
+#endif

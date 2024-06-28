@@ -11,11 +11,3 @@ int string_length(const char* str) {
 /// The function returns the length of the string
 /// </summary>
 /// <param name="str">The string</param>
-
-
-//void toUpper(char* str);
-/// <summary>
-/// The function converts the string to lowercase
-/// </summary>
-/// <param name="str">The string</param>
-//void toLower(char* str);
