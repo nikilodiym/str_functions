@@ -12,13 +12,10 @@ int string_length(const char* str) {
 /// </summary>
 /// <param name="str">The string</param>
 
-void string_copy(char* dest, const char* src) {
-	int i = 0;
-	while (src[i] != '\0') {
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
+char* string_copy(char* str1, const char* str2) {
+    char* ptr = str1;
+    while ((*str1++ = *str2++) != '\0');
+    return ptr;
 }
 
 /// <summary>
